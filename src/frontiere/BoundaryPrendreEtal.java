@@ -14,7 +14,7 @@ public class BoundaryPrendreEtal {
 			System.out.println("Désolé " + nomVendeur + ", il faut être un habitant de notre village pour commercer ici.");
 			return;
 		} else {
-			System.out.println("Désolé " + nomVendeur + ", je vais regarder si je peux vous trouver un étal.");
+			System.out.println("Bonjour " + nomVendeur + ", je vais regarder si je peux vous trouver un étal.");
 			
 		}
 		if(!controlPrendreEtal.resteEtals()) {
