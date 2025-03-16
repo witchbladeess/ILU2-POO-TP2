@@ -17,7 +17,7 @@ public class ControlPrendreEtal {
 	}
 
 	public int prendreEtal(String nomVendeur, String produit, int nbProduit) {
-		if(!verifierIdentite(nomVendeur)) {
+		if(!controlVerifierIdentite.verifierIdentite(nomVendeur)) {
 			return -1;
 		}
 		if(!resteEtals()) {
