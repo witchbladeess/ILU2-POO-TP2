@@ -24,10 +24,6 @@ public class Village {
 	public void setChef(Chef chef) {
 		this.chef = chef;
 	}
-
-	public Chef getChef() {
-		return chef;
-	}
 	
 	public void ajouterHabitant(Gaulois gaulois) {
 		if (nbVillageois < villageois.length) {

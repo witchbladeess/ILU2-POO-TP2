@@ -1,7 +1,7 @@
 package controleur;
 
 import villagegaulois.Village;
-import personnages.Gaulois;
+
 
 
 public class ControlVerifierIdentite {
@@ -12,14 +12,6 @@ public class ControlVerifierIdentite {
 	}
 
 	public boolean verifierIdentite(String nomVendeur) {
-	Gaulois habitant = village.trouverHabitant(nomVendeur);
-	if(habitant != null) {
-		if(habitant.equals(village.getChef())) {
-			return true;
-		}
-		return true;
-		} else {
-			return false;
-		}
+		return (village.trouverHabitant(nomVendeur)!=null);
 	}
 }

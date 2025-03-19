@@ -15,7 +15,7 @@ public class BoundaryAfficherMarche {
 			System.out.println("Le marché est vide, revenez plus tard.\n");	
 		} else {
 			System.out.println(nomAcheteur + ", vous trouverez au marché: \n");
-			for(int i = 0; i < infosMarche.length - 3; i+=3) {
+			for(int i = 0; i < infosMarche.length; i++) {
 				String vendeur = infosMarche[i];
 				String quantite = infosMarche[i+1];
 				String produit = infosMarche[i+2];

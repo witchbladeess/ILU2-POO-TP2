@@ -22,18 +22,15 @@ public class ControlLibererEtal {
 	public String[] libererEtal(String nomVendeur) {
 		Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
 		String[] donneesEtal = new String[5];
-		donneesEtal[0] = "false";  
-        donneesEtal[1] = nomVendeur;
-        donneesEtal[2] = "N/A";  
-        donneesEtal[3] = "0";   
-        donneesEtal[4] = "0";    
-		if(etal!=null) {
-			donneesEtal[0] = etal.isEtalOccupe() ? "true" : "false";
-			donneesEtal[1] = nomVendeur;
-			donneesEtal[2] = etal.getProduit();
-			donneesEtal[3] = String.valueOf(etal.getQuantiteDebutMarche());
-			donneesEtal[4] = String.valueOf(etal.getQuantiteDebutMarche()- etal.getQuantite());
+		if (etal == null) {
+		    return null; 
 		}
+		donneesEtal[0] = etal.isEtalOccupe() ? "true" : "false";
+		donneesEtal[1] = nomVendeur;
+		donneesEtal[2] = etal.getProduit();
+		donneesEtal[3] = String.valueOf(etal.getQuantiteDebutMarche());
+		donneesEtal[4] = String.valueOf(etal.getQuantiteDebutMarche()- etal.getQuantite());
+		etal.libererEtal();
 		return donneesEtal;
 	}
 
