@@ -40,9 +40,8 @@ public class ControlAcheterProduit {
 		if(quantiteEtal==0) {
 			return 0;
 		}else if(quantiteEtal<quantite) {
-			int quantiteAchetee = quantite - quantiteEtal;
-			etalVendeur.acheterProduit(quantiteAchetee);
-			return quantiteAchetee;
+			etalVendeur.acheterProduit(quantiteEtal);
+			return quantiteEtal;
 		}else {
 			etalVendeur.acheterProduit(quantite);
 			return quantite;
